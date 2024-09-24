@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EDUVR 360 - Revoluciona la Educación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>EDUVR 360</h1>
+            <p>La Realidad Virtual en las Aulas</p>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <article>
+                <h2>Revoluciona la Educación con EDUVR 360</h2>
+                <p>En un mundo cada vez más digitalizado, la educación no se queda atrás en la adopción de nuevas tecnologías. <strong>EDUVR 360</strong> nace con el propósito de transformar la manera en que aprendemos, utilizando la realidad virtual para crear experiencias educativas inmersivas. A través de la simulación de aulas personalizables, esta herramienta está diseñada para mejorar la enseñanza y el aprendizaje en todos los niveles.</p>
+
+                <h3>¿Qué es EDUVR 360?</h3>
+                <p><strong>EDUVR 360</strong> es una plataforma de realidad virtual diseñada específicamente para la educación. Los usuarios pueden crear y personalizar sus propias aulas virtuales, permitiendo que estudiantes y profesores interactúen en un entorno dinámico y envolvente. Esta tecnología no solo permite que los estudiantes se sumerjan en el contenido, sino que también facilita una forma más práctica y atractiva de aprender.</p>
+
+                <h3>Ventajas de EDUVR 360 en el Aula</h3>
+                <ul>
+                    <li><strong>Inmersión Completa:</strong> Los estudiantes no solo ven el contenido, ¡lo experimentan!</li>
+                    <li><strong>Personalización de Entornos:</strong> Flexibilidad en la creación de aulas adaptadas a las necesidades.</li>
+                    <li><strong>Fomenta el Aprendizaje Colaborativo:</strong> Actividades en equipo en tiempo real.</li>
+                    <li><strong>Acceso desde Cualquier Lugar:</strong> Estudia desde cualquier parte del mundo.</li>
+                    <li><strong>Innovación Constante:</strong> Actualizaciones frecuentes que incorporan nuevas tendencias.</li>
+                </ul>
+
+                <h3>¿Cómo EDUVR 360 Cambia la Manera en que Enseñamos?</h3>
+                <p>EDUVR 360 permite a los docentes superar las limitaciones del aula física. Los profesores pueden llevar a los estudiantes a excursiones virtuales, realizar simulaciones o crear experiencias interactivas que hacen que el aprendizaje sea más relevante y atractivo.</p>
+
+                <h3>Casos de Uso</h3>
+                <ul>
+                    <li><strong>Ciencias:</strong> Explorar el cuerpo humano en 3D o realizar experimentos químicos virtuales.</li>
+                    <li><strong>Historia:</strong> Viajar a civilizaciones antiguas y explorar lugares históricos.</li>
+                    <li><strong>Idiomas:</strong> Practicar en un entorno simulado con hablantes nativos.</li>
+                </ul>
+
+                <h3>Conclusión</h3>
+                <p>EDUVR 360 representa el futuro de la educación, combinando tecnología avanzada con metodologías pedagógicas efectivas. Al integrar la realidad virtual en el aula, los estudiantes tienen la oportunidad de aprender de una manera más interactiva, envolvente y práctica.</p>
+            </article>
+        </div>
+    </section>
+
+ <!-- Comentarios Section -->
+ <section class="comments">
+    <div class="container">
+        <h3>Comentarios</h3>
+        <div class="comment-box">
+            <form id="comment-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                <label for="comment">Comentario:</label>
+                <textarea id="comment" name="comment" placeholder="Escribe tu comentario aquí..." required></textarea>
+
+                <button type="submit">Enviar Comentario</button>
+            </form>
+        </div>
+
+        <div id="posted-comments">
+            <h4>Comentarios Recientes</h4>
+            
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const name = document.getElementById('name').value;
+        const comment = document.getElementById('comment').value;
+
+        
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        commentDiv.innerHTML = `<strong>${name}:</strong> <p>${comment}</p>`;
+
+      
+        document.getElementById('posted-comments').appendChild(commentDiv);
+
+        
+       document.getElementById('comment-form').reset();
+    });
+</script>
+
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EDUVR 360. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
